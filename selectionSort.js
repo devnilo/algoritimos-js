@@ -22,3 +22,30 @@ console.log(livros); /*
     { Titulo: 'Elixir', Preco: 50 }
   ]
 */
+
+//--------------------------------------------------------------------------------------------------------------------------------------//
+
+// criando a mesma lista, agora utilizando o forEach
+/* Se examinarmos o laço, vemos que o primeiro parâmetro da função callback, livro, não está sendo utilizado; nesse caso, podemos 
+usar a notação do JavaScript para informar que o primeiro parâmetro não será utilizado no código, através do _ */
+
+livros.forEach((_, indice) => {
+    let menor = menorValor(livros, indice)
+   
+    let livroAtual = livros[indice];
+    let livroMenorPreco = livros[menor];
+   
+    livros[indice] = livroMenorPreco
+    livros[menor] = livroAtual 
+   })
+   
+   console.log(livros); /* 
+   [
+       { Titulo: 'PHP', Preco: 15 },
+       { Titulo: 'Python', Preco: 20 },
+       { Titulo: 'JavaScript', Preco: 25 },
+       { Titulo: 'Java', Preco: 30 },
+       { Titulo: 'GO', Preco: 45 },
+       { Titulo: 'Elixir', Preco: 50 }
+     ]
+   */
