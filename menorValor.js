@@ -12,4 +12,5 @@ function menorValor(arrProdutos, posicaoInicial) {
     return maisBarato;
 }
 
+// exportando essa function para utilizarmos em outros arquivos
 module.exports = menorValor;

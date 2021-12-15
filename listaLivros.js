@@ -26,5 +26,5 @@ const precoLivros = [
     }
 ];
 
-// exportando esses arrays para o arquivo index.js
+// exportando esses arrays para o podemos utilizar em qualquer outro arquivo
 module.exports = precoLivros;
