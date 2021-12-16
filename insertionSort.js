@@ -32,3 +32,9 @@ insertionSort(livros); /*
   { Titulo: 'Elixir', Preco: 50 }
 ]
 */
+
+/* nas funções selectionSort() e insertionSort(), vimos que um laço de repetição dentro do outro faz com que a taxa de crescimento não 
+aumenta mais de forma linear com relação à quantidade de elementos na lista, porém de forma quadrática, pois um laço dentro de outro 
+significa que a quantidade de operações será de n*n (sendo n a quantidade de elementos). Ou seja, selectionSort() e insertionSort() 
+têm complexidade de O(n²).
+*/
