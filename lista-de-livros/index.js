@@ -1,4 +1,4 @@
-/* Irei fazer a junção de duas listas e ordernar elas por preço do menor para o maior */
+/* Irei fazer a junção de duas listas ordenadas e ordernar elas por preço do menor para o maior */
 
 const {edGalho, edFolha} = require('./arrays');
 
