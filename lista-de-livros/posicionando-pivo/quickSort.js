@@ -3,7 +3,15 @@ const trocaLugar = require('./encontraMenores')
 
 function quickSort(array, esquerda, direita) {
     if (array.length > 1) {
-        let varTemp = particiona(array, esquerda, direita)
+        let indiceAtual = particiona(array, esquerda, direita)
+
+        if (esquerda < indiceAtual -1) {
+            quickSort(array, esquerda, indiceAtual -1);
+        }
+
+        if (indiceAtual < direita) {
+            quickSort(array, indiceAtual, direita);
+        }
     }
 
     return array;
@@ -16,17 +24,22 @@ function particiona(array, esquerda, direita) {
     let atualDir = direita; // 10
 
     while (atualEsq <= atualDir) {
+    // enquanto o indice da esquerda for menor que o pivô, mantém e passa para o proximo indice
         while (array[atualEsq.preco < pivo.preco]) {
             atualEsq++
         }
-
+    // enquanto o indice da direita for maior que o pivô, mantém e passa(voltando) para o proximo indice
         while (array[atualDir.preco > pivo.preco]) {
             atualDir--
         }
 
         if (atualEsq <= atualDir) {
-
+            trocaLugar(array, atualEsq, atualDir);
+            atualEsq++;
+            atualDir--;
         }
+
+        return atualEsq
     }
 }
 
